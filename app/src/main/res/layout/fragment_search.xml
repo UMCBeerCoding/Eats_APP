@@ -9,7 +9,8 @@
         android:id="@+id/searchfrag_search_cv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/box_roundbox_graystroke"
         android:elevation="10dp"
         app:cardCornerRadius="50dp"
@@ -32,12 +33,11 @@
         android:id="@+id/searchfrag_search_iv"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/search_select"
         app:layout_constraintBottom_toBottomOf="@+id/searchfrag_search_cv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/searchfrag_search_cv" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/searchfrag_rv"
