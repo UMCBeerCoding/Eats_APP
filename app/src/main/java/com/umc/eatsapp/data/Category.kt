@@ -1,7 +1,8 @@
 package com.umc.eatsapp
 
 data class Category(
-    var name : String,
-    var image : Int? = null
+    var catIdx : Int,
+    var catName : String,
+    var catImage : String
 ) {
 }
