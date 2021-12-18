@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/homefrag_select_storeImg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/banner_homefrag_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/homefrag_select_storename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="너에게 치밥을 보낸다"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_select_storeImg"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/homefrag_select_delivertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 - 26 분"
+        android:textSize="16sp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_select_storeImg"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/homefrag_select_starimg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/star"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_select_storename"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/homefrag_select_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.7(452) · 0.7km · 무료배달"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/homefrag_select_starimg"
+        app:layout_constraintTop_toTopOf="@id/homefrag_select_starimg"
+        app:layout_constraintBottom_toBottomOf="@id/homefrag_select_starimg"/>
+
+    <TextView
+        android:id="@+id/homefrag_select_15000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       15,000원 쿠폰"
+        android:padding="5dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/box_bluestroke"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_select_starimg"/>
+
+    <ImageView
+        android:id="@+id/homefrag_select_pricetag"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/pricetag"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/homefrag_select_15000"
+        app:layout_constraintTop_toTopOf="@id/homefrag_select_15000"
+        app:layout_constraintBottom_toBottomOf="@id/homefrag_select_15000"/>
+
+    <TextView
+        android:id="@+id/homefrag_select_pack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="포장"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/box_roundbox_black"
+        app:layout_constraintStart_toEndOf="@id/homefrag_select_15000"
+        app:layout_constraintTop_toTopOf="@id/homefrag_select_15000"
+        app:layout_constraintBottom_toBottomOf="@id/homefrag_select_15000"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/homefrag_command_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/banner_homefrag_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homefrag_command_storename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피자헛 구의점"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_command_img"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/homefrag_command_starimg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/star"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_command_storename"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/homefrag_command_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.7(452) · 0.7km"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/homefrag_command_starimg"
+        app:layout_constraintTop_toTopOf="@id/homefrag_command_starimg"
+        app:layout_constraintBottom_toBottomOf="@id/homefrag_command_starimg"/>
+
+
+
+    <TextView
+        android:id="@+id/homefrag_command_15000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       15,000원 쿠폰"
+        android:padding="5dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/box_bluestroke"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homefrag_command_starimg"/>
+
+    <ImageView
+        android:id="@+id/homefrag_command_pricetag"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/pricetag"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/homefrag_command_15000"
+        app:layout_constraintTop_toTopOf="@id/homefrag_command_15000"
+        app:layout_constraintBottom_toBottomOf="@id/homefrag_command_15000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
