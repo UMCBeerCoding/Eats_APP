@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/login_close_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/closebar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/login_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:src="@drawable/coupanglogo"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/login_close_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/login_email_ll"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toBottomOf="@id/login_logo_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/box_graystroke"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:text="이메일    "
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/EditTextGreyStyle"-->
+<!--            android:theme="@style/EditTextGreyStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            app:boxStrokeColor="@color/white"-->
+<!--            app:hintEnabled="false"-->
+<!--            app:boxBackgroundColor="@color/white"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_marginEnd="5dp">-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:hint="쿠팡 아이디(이메일) 입력"
+                android:background="@null"/>
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_password_ll"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toBottomOf="@id/login_email_ll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/box_graystroke"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:text="비밀번호"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:textSize="15sp"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/EditTextGreyStyle"-->
+<!--            android:theme="@style/EditTextGreyStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            app:hintEnabled="false"-->
+<!--            app:boxBackgroundColor="@color/white"-->
+<!--            app:boxStrokeColor="@color/white"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            app:passwordToggleEnabled="true"-->
+<!--            android:layout_marginEnd="5dp">-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호 입력"
+                android:textSize="14sp"
+                android:inputType="textPassword"
+                android:background="@null"/>
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/login_login_tv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/box_roundbox"
+        android:gravity="center"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/login_password_ll"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <LinearLayout
+        android:id="@+id/login_find_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/login_login_tv"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/login_idfind_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/login_password_ll"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/login_password_ll"/>
+
+        <TextView
+            android:id="@+id/login_pwfind_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/login_password_ll"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/login_password_ll"/>
+
+        <TextView
+            android:id="@+id/login_register_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/main"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/login_password_ll"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
