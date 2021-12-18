@@ -1,4 +1,4 @@
-package com.umc.eatsapp
+package com.umc.eatsapp.serviceView
 
 interface RegisterView {
     fun onRegisterLoading()
