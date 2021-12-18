@@ -12,7 +12,8 @@
         android:src="@drawable/closebar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"/>
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"/>
 
     <ImageView
         android:id="@+id/login_logo_iv"
