@@ -11,4 +11,6 @@
     <color name="lightgray">#FAFAFA</color>
     <color name="blue">#0074E9</color>
     <color name="darkgray">#8996A4</color>
+    <color name="deepgray">#606060</color>
+    <color name="skyblue">#3F8EF7</color>
 </resources>
