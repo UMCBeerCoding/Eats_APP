@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.umc.eatsapp.Category
-import com.umc.eatsapp.adapter.homefrag_category_RVadapter
+import com.umc.eatsapp.adapter.search_category_RVadapter
 import com.umc.eatsapp.databinding.FragmentSearchBinding
 import com.umc.eatsapp.service.StoreService
 import com.umc.eatsapp.serviceView.CatView
 
 class SearchFragment: Fragment(), CatView {
     lateinit var binding : FragmentSearchBinding
-    private lateinit var categoryAdatper : homefrag_category_RVadapter
+    private lateinit var categoryAdatper : search_category_RVadapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,8 +42,8 @@ class SearchFragment: Fragment(), CatView {
     }
 
     private fun initRV() {
-        categoryAdatper = homefrag_category_RVadapter(requireContext())
-        binding.searchfragRv.layoutManager = GridLayoutManager(context,3, LinearLayoutManager.HORIZONTAL, false)
+        categoryAdatper = search_category_RVadapter(requireContext())
+        binding.searchfragRv.layoutManager = GridLayoutManager(context,3, LinearLayoutManager.VERTICAL, false)
         binding.searchfragRv.adapter = categoryAdatper
     }
 
