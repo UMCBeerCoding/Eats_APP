@@ -8,5 +8,5 @@ data class Storeinfo(
     var distance : String,
     var deliverTip : String,
     var deliveryTime : Boolean,
-    var storeImg : ArrayList<String>
+    var storeImg : String
 )

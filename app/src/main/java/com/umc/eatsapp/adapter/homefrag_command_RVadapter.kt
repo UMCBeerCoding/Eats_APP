@@ -44,7 +44,7 @@ class homefrag_command_RVadapter(val context : Context) :
 
     inner class viewHolder(val binding : ItemHomefragCommandBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(store : Storeinfo){
-            Glide.with(context).load(store.storeImg[0]!!).into(binding.homefragCommandImg)
+            Glide.with(context).load(store.storeImg).into(binding.homefragCommandImg)
             binding.homefragCommandStorename.text = store.storeName
             binding.homefragCommandNum.text = store.rating.toString() +"("+store.reviewNum.toString()+") · "+store.distance.toString()
         }
