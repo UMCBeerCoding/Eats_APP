@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.umc.eatsapp.AuthResult
 import com.umc.eatsapp.data.User
 import com.umc.eatsapp.databinding.ActivityLoginBinding
+import com.umc.eatsapp.saveUserinfo
 import com.umc.eatsapp.service.AuthService
 import com.umc.eatsapp.serviceView.LoginView
 
@@ -43,6 +44,9 @@ class LoginActivity :AppCompatActivity(),LoginView{
     }
 
     override fun onLoginSuccess(auth: AuthResult) {
+
+        saveUserinfo(this,User("","",auth.name,auth.phoneNum))
+
         Toast.makeText(this,"로그인에 성공하셨습니다.",Toast.LENGTH_SHORT).show()
         startActivity(Intent(this,MainActivity::class.java))
         finish()
