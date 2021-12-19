@@ -113,15 +113,15 @@ class HomeFragment :  Fragment(),CatView,StoreView{
     }
 
     override fun onCatFailure(code: Int, message: String) {
-        Toast.makeText(requireContext(),message,Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,message,Toast.LENGTH_SHORT).show()
     }
 
     override fun onStoreLoading() {
-        Toast.makeText(requireContext(),"로딩중.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,"로딩중.", Toast.LENGTH_SHORT).show()
     }
 
     override fun onStoreSuccess(stores: ArrayList<Storeinfo>) {
-        Toast.makeText(requireContext(),"성공.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,"성공.", Toast.LENGTH_SHORT).show()
         commandAdapter.addStore(stores)
     }
 

@@ -1,30 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.amar.library.ui.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
     android:fillViewport="true"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:stickyHeader="@id/homefrag_header_ll">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homefrag_header_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/homefrag_location_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/location"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/homefrag_location"
+                app:layout_constraintEnd_toStartOf="@id/homefrag_location"
+                app:layout_constraintTop_toTopOf="@+id/homefrag_location" />
+
+            <TextView
+                android:id="@+id/homefrag_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울특별시 광진구 자양로 176"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homefrag_downarrow_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/downarrow_skyblue"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/homefrag_location"
+                app:layout_constraintStart_toEndOf="@id/homefrag_location"
+                app:layout_constraintTop_toTopOf="@+id/homefrag_location" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/search_select"
+                app:layout_constraintBottom_toBottomOf="@id/homefrag_downarrow_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/homefrag_downarrow_iv" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#99CACACA"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/homefrag_category_rv"
             android:layout_width="match_parent"
-            android:overScrollMode="never"
             android:layout_height="230dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            tools:listitem="@layout/item_homefrag_category"
             android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homefrag_header_ll"
+            tools:listitem="@layout/item_homefrag_category" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"
@@ -158,7 +219,7 @@
             android:id="@+id/homefrag_banner"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:src="@drawable/banner_homefrag_1"
             app:layout_constraintTop_toBottomOf="@id/homefrag_command_hs"
             app:layout_constraintStart_toStartOf="parent"
@@ -313,4 +374,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.core.widget.NestedScrollView>
+</com.amar.library.ui.StickyScrollView>
